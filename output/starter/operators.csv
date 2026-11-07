@@ -1,6 +1,7 @@
 operator_id,name,role,location_id
-OP-001,Avery Planner,PLANNER,LOC-001
-OP-002,Jordan Carrier,CARRIER,LOC-007
+OP-001,Avery Planner,PLANNER,LOC-002
+OP-002,Jordan Carrier,CARRIER,LOC-006
 OP-003,Morgan Warehouse,WAREHOUSE_OPERATOR,LOC-002
 OP-004,Riley Supplier,SUPPLIER,LOC-001
 OP-005,Casey Analyst,LOGISTICS_ANALYST,LOC-002
+OP-006,Taylor Operations,OPERATIONS_MANAGER,LOC-002

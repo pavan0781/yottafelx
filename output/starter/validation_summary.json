@@ -1,69 +1,255 @@
 {
-  "checks": {
-    "all_assets_have_snapshot": true,
-    "allowed_values": true,
-    "custody_event_id_convention": true,
-    "custody_event_order": true,
-    "custody_events_per_asset": true,
-    "deposit_ledger_reconciliation": true,
-    "deposit_lifecycle": true,
-    "entity_relationships": true,
-    "foreign_keys:asset_snapshots": true,
-    "foreign_keys:custody_events": true,
-    "foreign_keys:deposit_ledger": true,
-    "foreign_keys:inspections": true,
-    "foreign_keys:locations": true,
-    "foreign_keys:operators": true,
-    "foreign_keys:repairs": true,
-    "foreign_keys:return_authorizations": true,
-    "foreign_keys:reusable_assets": true,
-    "foreign_keys:shipment_assets": true,
-    "foreign_keys:shipments": true,
-    "ground_truth_matches_source_rules": true,
-    "inspection_lifecycle": true,
-    "missing_actor_exceptions_labelled": true,
-    "primary_key:asset_snapshots": true,
-    "primary_key:asset_types": true,
-    "primary_key:custody_events": true,
-    "primary_key:deposit_ledger": true,
-    "primary_key:inspections": true,
-    "primary_key:locations": true,
-    "primary_key:operators": true,
-    "primary_key:owners": true,
-    "primary_key:repairs": true,
-    "primary_key:return_authorizations": true,
-    "primary_key:reusable_assets": true,
-    "primary_key:shipment_assets": true,
-    "primary_key:shipments": true,
-    "repair_lifecycle": true,
-    "return_authorization_lifecycle": true,
-    "return_before_dispatch_exception_count": true,
-    "simultaneous_location_exception_count": true,
-    "snapshot_ledger_balance": true,
-    "snapshot_lifecycle_and_age": true
+  "anomaly_metrics": {
+    "CUSTODY_ACTOR_MISSING": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 1
+    },
+    "DUPLICATE_DEPOSIT_REFUND": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 1
+    },
+    "REPAIR_WITHOUT_INSPECTION": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 1
+    },
+    "RETURN_BEFORE_DISPATCH": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 1
+    },
+    "SIMULTANEOUS_LOCATIONS": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 1
+    }
   },
-  "errors": [],
+  "checks": {
+    "allowed_enums_and_ids": true,
+    "arithmetic_reconciliation": false,
+    "date_order_and_domain": true,
+    "duplicate_checks": true,
+    "foreign_key_integrity": true,
+    "lifecycle_transitions_and_location_chain": false,
+    "primary_key_uniqueness": true
+  },
+  "errors": [
+    {
+      "entity_id": "ASSET-0000139",
+      "issue_type": "CUSTODY_ACTOR_MISSING",
+      "message": "Custody event has no attributed actor.",
+      "record_id": "CUST-ASSET-0000139-000003",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000157",
+      "issue_type": "SIMULTANEOUS_LOCATIONS",
+      "message": "Conflicting destination observations at 2026-01-18T09:00:00+00:00.",
+      "record_id": "CUST-ASSET-0000157-000005",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000189",
+      "issue_type": "RETURN_BEFORE_DISPATCH",
+      "message": "Return receipt precedes dispatch for the same asset cycle.",
+      "record_id": "CUST-ASSET-0000189-000004",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000200",
+      "issue_type": "DUPLICATE_DEPOSIT_REFUND",
+      "message": "Multiple refunds reference deposit charge DLG-2026-00000575.",
+      "record_id": "DLG-2026-00000577",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000088",
+      "issue_type": "REPAIR_WITHOUT_INSPECTION",
+      "message": "Closed repair has no inspection evidence.",
+      "record_id": "REP-2026-000015",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000200",
+      "issue_type": "LEDGER_RECONCILIATION",
+      "message": "Settlement rows {'DEPOSIT_REFUND': -25000} differ from rule-derived settlement {'DEPOSIT_REFUND': -12500}.",
+      "record_id": "DLG-2026-00000577",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000157",
+      "issue_type": "LOCATION_CHAIN_MISMATCH",
+      "message": "Checkpoint must preserve the last verified location.",
+      "record_id": "CUST-ASSET-0000157-000005",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000189",
+      "issue_type": "INVALID_STATE_TRANSITION",
+      "message": "Transition AVAILABLE --RETURN_RECEIVED--> is not allowed.",
+      "record_id": "CUST-ASSET-0000189-000004",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000189",
+      "issue_type": "LOCATION_CHAIN_MISMATCH",
+      "message": "Event starts at LOC-006, previous verified location is LOC-002.",
+      "record_id": "CUST-ASSET-0000189-000004",
+      "severity": "ERROR"
+    }
+  ],
+  "findings": [
+    {
+      "entity_id": "ASSET-0000139",
+      "issue_type": "CUSTODY_ACTOR_MISSING",
+      "message": "Custody event has no attributed actor.",
+      "record_id": "CUST-ASSET-0000139-000003",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000157",
+      "issue_type": "SIMULTANEOUS_LOCATIONS",
+      "message": "Conflicting destination observations at 2026-01-18T09:00:00+00:00.",
+      "record_id": "CUST-ASSET-0000157-000005",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000189",
+      "issue_type": "RETURN_BEFORE_DISPATCH",
+      "message": "Return receipt precedes dispatch for the same asset cycle.",
+      "record_id": "CUST-ASSET-0000189-000004",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000200",
+      "issue_type": "DUPLICATE_DEPOSIT_REFUND",
+      "message": "Multiple refunds reference deposit charge DLG-2026-00000575.",
+      "record_id": "DLG-2026-00000577",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000088",
+      "issue_type": "REPAIR_WITHOUT_INSPECTION",
+      "message": "Closed repair has no inspection evidence.",
+      "record_id": "REP-2026-000015",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000200",
+      "issue_type": "LEDGER_RECONCILIATION",
+      "message": "Settlement rows {'DEPOSIT_REFUND': -25000} differ from rule-derived settlement {'DEPOSIT_REFUND': -12500}.",
+      "record_id": "DLG-2026-00000577",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000157",
+      "issue_type": "LOCATION_CHAIN_MISMATCH",
+      "message": "Checkpoint must preserve the last verified location.",
+      "record_id": "CUST-ASSET-0000157-000005",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000189",
+      "issue_type": "INVALID_STATE_TRANSITION",
+      "message": "Transition AVAILABLE --RETURN_RECEIVED--> is not allowed.",
+      "record_id": "CUST-ASSET-0000189-000004",
+      "severity": "ERROR"
+    },
+    {
+      "entity_id": "ASSET-0000189",
+      "issue_type": "LOCATION_CHAIN_MISMATCH",
+      "message": "Event starts at LOC-006, previous verified location is LOC-002.",
+      "record_id": "CUST-ASSET-0000189-000004",
+      "severity": "ERROR"
+    }
+  ],
+  "metrics": {
+    "anomaly_metrics": {
+      "CUSTODY_ACTOR_MISSING": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 1
+      },
+      "DUPLICATE_DEPOSIT_REFUND": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 1
+      },
+      "REPAIR_WITHOUT_INSPECTION": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 1
+      },
+      "RETURN_BEFORE_DISPATCH": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 1
+      },
+      "SIMULTANEOUS_LOCATIONS": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 1
+      }
+    },
+    "assets": 200,
+    "custody_events": 1000,
+    "damage_deductions_cents": 158225,
+    "damaged_assets": 40,
+    "delayed_returns": 95,
+    "deposit_charges_cents": 1822500,
+    "deposit_refunds_cents": 1357900,
+    "disputed_handoffs": 10,
+    "ground_truth_anomalies": 5,
+    "late_fee_deductions_cents": 91375,
+    "loss_forfeitures_cents": 115000,
+    "lost_assets": 16,
+    "net_deposit_balance_cents": 100000,
+    "open_custody_disputes": 3,
+    "open_repairs": 8,
+    "overdue_open_returns": 3,
+    "owner_absorbed_damage_cost_cents": 161775,
+    "shipments": 100,
+    "trip_count": 241
+  },
+  "missed_ground_truth": [],
   "passed": true,
   "row_counts": {
     "asset_snapshots": 200,
     "asset_types": 3,
     "custody_events": 1000,
-    "deposit_ledger": 355,
-    "inspections": 153,
-    "locations": 8,
-    "operators": 5,
+    "deposit_ledger": 577,
+    "inspections": 40,
+    "lifecycle_transitions": 14,
+    "locations": 7,
+    "operators": 6,
     "owners": 3,
-    "repairs": 13,
-    "return_authorizations": 200,
+    "repairs": 24,
+    "return_authorizations": 241,
     "reusable_assets": 200,
-    "shipment_assets": 200,
+    "shipment_assets": 241,
     "shipments": 100
   },
-  "warnings": [
-    "ASSET-0000001 contains the labelled simultaneous-location exception.",
-    "ASSET-0000002 contains the labelled return-before-dispatch exception.",
-    "ASSET-0000005 contains the labelled missing-actor exception.",
-    "REP-2026-000001 is the labelled no-inspection closure.",
-    "ASSET-0000003 contains the labelled duplicate deposit refund."
-  ]
+  "unmatched_findings": []
 }

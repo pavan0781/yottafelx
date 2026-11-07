@@ -1,16 +1,58 @@
 {
+  "anomaly_metrics": {
+    "CUSTODY_ACTOR_MISSING": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 1
+    },
+    "DUPLICATE_DEPOSIT_REFUND": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 1
+    },
+    "REPAIR_WITHOUT_INSPECTION": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 1
+    },
+    "RETURN_BEFORE_DISPATCH": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 1
+    },
+    "SIMULTANEOUS_LOCATIONS": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "true_positive": 1
+    }
+  },
   "assets": 200,
-  "assets_with_nonzero_deposit_balance": 47,
   "custody_events": 1000,
-  "damaged_assets": 23,
-  "delayed_returns": 34,
-  "deposit_charges_cents": 1500000,
-  "deposit_refunds_cents": 1187500,
-  "disputed_handoffs": 5,
-  "exception_assets": 5,
-  "ground_truth_labels": 77,
-  "lost_assets": 10,
-  "net_deposit_balance_cents": 312500,
-  "on_time_return_rate": 0.7792,
-  "shipments": 100
+  "damage_deductions_cents": 158225,
+  "damaged_assets": 40,
+  "delayed_returns": 95,
+  "deposit_charges_cents": 1822500,
+  "deposit_refunds_cents": 1357900,
+  "disputed_handoffs": 10,
+  "ground_truth_anomalies": 5,
+  "late_fee_deductions_cents": 91375,
+  "loss_forfeitures_cents": 115000,
+  "lost_assets": 16,
+  "net_deposit_balance_cents": 100000,
+  "open_custody_disputes": 3,
+  "open_repairs": 8,
+  "overdue_open_returns": 3,
+  "owner_absorbed_damage_cost_cents": 161775,
+  "shipments": 100,
+  "trip_count": 241
 }

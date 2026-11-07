@@ -1,78 +1,178 @@
-issue_id,issue_type,entity_type,entity_id,ground_truth,expected_decision
-GT-000001,SIMULTANEOUS_LOCATIONS,ReusableAsset,ASSET-0000001,EXCEPTION,Flag conflicting current locations; do not silently select one.
-GT-000002,RETURN_BEFORE_DISPATCH,ReusableAsset,ASSET-0000002,EXCEPTION,Reject or quarantine return chronology.
-GT-000003,DUPLICATE_DEPOSIT_REFUND,ReusableAsset,ASSET-0000003,EXCEPTION,Flag the second refund and retain both ledger entries.
-GT-000004,DELAYED_RETURN,ReusableAsset,ASSET-0000003,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000005,DAMAGED_ASSET,ReusableAsset,ASSET-0000003,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000006,REPAIR_WITHOUT_INSPECTION,ReusableAsset,ASSET-0000004,EXCEPTION,Block repair closure pending inspection evidence.
-GT-000007,DAMAGED_ASSET,ReusableAsset,ASSET-0000004,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000008,CUSTODY_ACTOR_MISSING,ReusableAsset,ASSET-0000005,EXCEPTION,Flag the custody event for attribution.
-GT-000009,DELAYED_RETURN,ReusableAsset,ASSET-0000011,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000010,LOST_ASSET,ReusableAsset,ASSET-0000013,LOST,Keep the deposit charged and mark the asset lost from custody events.
-GT-000011,DELAYED_RETURN,ReusableAsset,ASSET-0000014,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000012,DELAYED_RETURN,ReusableAsset,ASSET-0000017,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000013,DAMAGED_ASSET,ReusableAsset,ASSET-0000017,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000014,DAMAGED_ASSET,ReusableAsset,ASSET-0000028,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000015,DAMAGED_ASSET,ReusableAsset,ASSET-0000030,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000016,LOST_ASSET,ReusableAsset,ASSET-0000037,LOST,Keep the deposit charged and mark the asset lost from custody events.
-GT-000017,DAMAGED_ASSET,ReusableAsset,ASSET-0000041,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000018,DELAYED_RETURN,ReusableAsset,ASSET-0000043,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000019,DAMAGED_ASSET,ReusableAsset,ASSET-0000044,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000020,LOST_ASSET,ReusableAsset,ASSET-0000046,LOST,Keep the deposit charged and mark the asset lost from custody events.
-GT-000021,DELAYED_RETURN,ReusableAsset,ASSET-0000047,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000022,DAMAGED_ASSET,ReusableAsset,ASSET-0000050,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000023,LOST_ASSET,ReusableAsset,ASSET-0000051,LOST,Keep the deposit charged and mark the asset lost from custody events.
-GT-000024,DELAYED_RETURN,ReusableAsset,ASSET-0000056,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000025,DISPUTED_CUSTODY_HANDOFF,ReusableAsset,ASSET-0000058,DISPUTED,Escalate the handoff for operator confirmation.
-GT-000026,DAMAGED_ASSET,ReusableAsset,ASSET-0000064,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000027,DELAYED_RETURN,ReusableAsset,ASSET-0000067,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000028,DAMAGED_ASSET,ReusableAsset,ASSET-0000072,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000029,DAMAGED_ASSET,ReusableAsset,ASSET-0000078,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000030,LOST_ASSET,ReusableAsset,ASSET-0000080,LOST,Keep the deposit charged and mark the asset lost from custody events.
-GT-000031,DELAYED_RETURN,ReusableAsset,ASSET-0000084,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000032,DELAYED_RETURN,ReusableAsset,ASSET-0000088,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000033,DELAYED_RETURN,ReusableAsset,ASSET-0000089,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000034,LOST_ASSET,ReusableAsset,ASSET-0000091,LOST,Keep the deposit charged and mark the asset lost from custody events.
-GT-000035,DELAYED_RETURN,ReusableAsset,ASSET-0000092,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000036,DAMAGED_ASSET,ReusableAsset,ASSET-0000093,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000037,DELAYED_RETURN,ReusableAsset,ASSET-0000095,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000038,LOST_ASSET,ReusableAsset,ASSET-0000096,LOST,Keep the deposit charged and mark the asset lost from custody events.
-GT-000039,DELAYED_RETURN,ReusableAsset,ASSET-0000097,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000040,DISPUTED_CUSTODY_HANDOFF,ReusableAsset,ASSET-0000103,DISPUTED,Escalate the handoff for operator confirmation.
-GT-000041,DAMAGED_ASSET,ReusableAsset,ASSET-0000108,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000042,DELAYED_RETURN,ReusableAsset,ASSET-0000109,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000043,DISPUTED_CUSTODY_HANDOFF,ReusableAsset,ASSET-0000109,DISPUTED,Escalate the handoff for operator confirmation.
-GT-000044,DELAYED_RETURN,ReusableAsset,ASSET-0000110,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000045,DAMAGED_ASSET,ReusableAsset,ASSET-0000111,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000046,DAMAGED_ASSET,ReusableAsset,ASSET-0000112,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000047,DAMAGED_ASSET,ReusableAsset,ASSET-0000116,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000048,DELAYED_RETURN,ReusableAsset,ASSET-0000118,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000049,DELAYED_RETURN,ReusableAsset,ASSET-0000119,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000050,LOST_ASSET,ReusableAsset,ASSET-0000121,LOST,Keep the deposit charged and mark the asset lost from custody events.
-GT-000051,DAMAGED_ASSET,ReusableAsset,ASSET-0000122,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000052,DELAYED_RETURN,ReusableAsset,ASSET-0000130,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000053,DELAYED_RETURN,ReusableAsset,ASSET-0000136,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000054,DELAYED_RETURN,ReusableAsset,ASSET-0000139,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000055,DAMAGED_ASSET,ReusableAsset,ASSET-0000141,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000056,DELAYED_RETURN,ReusableAsset,ASSET-0000143,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000057,DAMAGED_ASSET,ReusableAsset,ASSET-0000143,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000058,DELAYED_RETURN,ReusableAsset,ASSET-0000148,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000059,DAMAGED_ASSET,ReusableAsset,ASSET-0000149,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000060,DELAYED_RETURN,ReusableAsset,ASSET-0000151,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000061,DELAYED_RETURN,ReusableAsset,ASSET-0000154,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000062,DELAYED_RETURN,ReusableAsset,ASSET-0000155,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000063,DAMAGED_ASSET,ReusableAsset,ASSET-0000156,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000064,DELAYED_RETURN,ReusableAsset,ASSET-0000157,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000065,DAMAGED_ASSET,ReusableAsset,ASSET-0000157,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000066,DISPUTED_CUSTODY_HANDOFF,ReusableAsset,ASSET-0000157,DISPUTED,Escalate the handoff for operator confirmation.
-GT-000067,DELAYED_RETURN,ReusableAsset,ASSET-0000158,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000068,DELAYED_RETURN,ReusableAsset,ASSET-0000159,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000069,DELAYED_RETURN,ReusableAsset,ASSET-0000164,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000070,LOST_ASSET,ReusableAsset,ASSET-0000169,LOST,Keep the deposit charged and mark the asset lost from custody events.
-GT-000071,DELAYED_RETURN,ReusableAsset,ASSET-0000171,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000072,DELAYED_RETURN,ReusableAsset,ASSET-0000172,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000073,DISPUTED_CUSTODY_HANDOFF,ReusableAsset,ASSET-0000175,DISPUTED,Escalate the handoff for operator confirmation.
-GT-000074,LOST_ASSET,ReusableAsset,ASSET-0000177,LOST,Keep the deposit charged and mark the asset lost from custody events.
-GT-000075,DAMAGED_ASSET,ReusableAsset,ASSET-0000186,DAMAGED,Require an inspection; repairable assets need a linked repair record.
-GT-000076,DELAYED_RETURN,ReusableAsset,ASSET-0000191,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
-GT-000077,DELAYED_RETURN,ReusableAsset,ASSET-0000192,DELAYED,Apply the lifecycle overdue rule using actual return date and RMA due date.
+issue_id,issue_type,entity_type,entity_id,offending_record_id,ground_truth,expected_decision
+GT-0000001,DAMAGED_ASSET,ReusableAsset,ASSET-0000001,INSP-2026-000001,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000002,DISPUTED_CUSTODY_HANDOFF,CustodyEvent,ASSET-0000001,CUST-ASSET-0000001-000002,DISPUTED_CUSTODY_HANDOFF,Hold the last verified location and block subsequent custody transitions until resolution.
+GT-0000003,DELAYED_RETURN,CustodyEvent,ASSET-0000001,CUST-ASSET-0000001-000005,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000004,DAMAGED_ASSET,ReusableAsset,ASSET-0000001,INSP-2026-000002,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000005,DELAYED_RETURN,CustodyEvent,ASSET-0000001,CUST-ASSET-0000001-000013,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000006,LOST_ASSET,ReusableAsset,ASSET-0000002,CUST-ASSET-0000002-000007,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000007,DELAYED_RETURN,CustodyEvent,ASSET-0000004,CUST-ASSET-0000004-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000008,DAMAGED_ASSET,ReusableAsset,ASSET-0000006,INSP-2026-000003,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000009,DELAYED_RETURN,CustodyEvent,ASSET-0000006,CUST-ASSET-0000006-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000010,DAMAGED_ASSET,ReusableAsset,ASSET-0000009,INSP-2026-000004,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000011,DELAYED_RETURN,CustodyEvent,ASSET-0000009,CUST-ASSET-0000009-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000012,DELAYED_RETURN,CustodyEvent,ASSET-0000010,CUST-ASSET-0000010-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000013,DAMAGED_ASSET,ReusableAsset,ASSET-0000011,INSP-2026-000005,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000014,DELAYED_RETURN,CustodyEvent,ASSET-0000011,CUST-ASSET-0000011-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000015,LOST_ASSET,ReusableAsset,ASSET-0000012,CUST-ASSET-0000012-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000016,DELAYED_RETURN,CustodyEvent,ASSET-0000013,CUST-ASSET-0000013-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000017,DAMAGED_ASSET,ReusableAsset,ASSET-0000014,INSP-2026-000006,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000018,OPEN_REPAIR,Repair,REP-2026-000004,REP-2026-000004,OPEN_REPAIR,Keep the deposit unsettled until the repair is closed.
+GT-0000019,DELAYED_RETURN,CustodyEvent,ASSET-0000014,CUST-ASSET-0000014-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000020,DAMAGED_ASSET,ReusableAsset,ASSET-0000016,INSP-2026-000007,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000021,DAMAGED_ASSET,ReusableAsset,ASSET-0000018,INSP-2026-000008,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000022,DELAYED_RETURN,CustodyEvent,ASSET-0000020,CUST-ASSET-0000020-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000023,DELAYED_RETURN,CustodyEvent,ASSET-0000021,CUST-ASSET-0000021-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000024,DELAYED_RETURN,CustodyEvent,ASSET-0000023,CUST-ASSET-0000023-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000025,DELAYED_RETURN,CustodyEvent,ASSET-0000024,CUST-ASSET-0000024-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000026,DELAYED_RETURN,CustodyEvent,ASSET-0000025,CUST-ASSET-0000025-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000027,DELAYED_RETURN,CustodyEvent,ASSET-0000026,CUST-ASSET-0000026-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000028,DAMAGED_ASSET,ReusableAsset,ASSET-0000027,INSP-2026-000009,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000029,DAMAGED_ASSET,ReusableAsset,ASSET-0000030,INSP-2026-000010,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000030,DELAYED_RETURN,CustodyEvent,ASSET-0000030,CUST-ASSET-0000030-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000031,LOST_ASSET,ReusableAsset,ASSET-0000032,CUST-ASSET-0000032-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000032,DELAYED_RETURN,CustodyEvent,ASSET-0000033,CUST-ASSET-0000033-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000033,DELAYED_RETURN,CustodyEvent,ASSET-0000035,CUST-ASSET-0000035-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000034,DELAYED_RETURN,CustodyEvent,ASSET-0000037,CUST-ASSET-0000037-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000035,DELAYED_RETURN,CustodyEvent,ASSET-0000038,CUST-ASSET-0000038-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000036,DELAYED_RETURN,CustodyEvent,ASSET-0000039,CUST-ASSET-0000039-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000037,DAMAGED_ASSET,ReusableAsset,ASSET-0000039,INSP-2026-000011,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000038,DELAYED_RETURN,CustodyEvent,ASSET-0000039,CUST-ASSET-0000039-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000039,DELAYED_RETURN,CustodyEvent,ASSET-0000041,CUST-ASSET-0000041-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000040,DELAYED_RETURN,CustodyEvent,ASSET-0000042,CUST-ASSET-0000042-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000041,LOST_ASSET,ReusableAsset,ASSET-0000043,CUST-ASSET-0000043-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000042,DAMAGED_ASSET,ReusableAsset,ASSET-0000045,INSP-2026-000012,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000043,DELAYED_RETURN,CustodyEvent,ASSET-0000045,CUST-ASSET-0000045-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000044,LOST_ASSET,ReusableAsset,ASSET-0000046,CUST-ASSET-0000046-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000045,DELAYED_RETURN,CustodyEvent,ASSET-0000047,CUST-ASSET-0000047-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000046,DAMAGED_ASSET,ReusableAsset,ASSET-0000048,INSP-2026-000013,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000047,DAMAGED_ASSET,ReusableAsset,ASSET-0000049,INSP-2026-000014,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000048,DELAYED_RETURN,CustodyEvent,ASSET-0000049,CUST-ASSET-0000049-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000049,OVERDUE_RETURN,ReturnAuthorization,RMA-2026-000057,RMA-2026-000057,OVERDUE_RETURN,Escalate as overdue after the expected return date; do not mark lost before threshold.
+GT-0000050,DISPUTED_CUSTODY_HANDOFF,CustodyEvent,ASSET-0000049,CUST-ASSET-0000049-000010,DISPUTED_CUSTODY_HANDOFF,Hold the last verified location and block subsequent custody transitions until resolution.
+GT-0000051,DISPUTED_CUSTODY_HANDOFF,CustodyEvent,ASSET-0000050,CUST-ASSET-0000050-000002,DISPUTED_CUSTODY_HANDOFF,Hold the last verified location and block subsequent custody transitions until resolution.
+GT-0000052,DELAYED_RETURN,CustodyEvent,ASSET-0000050,CUST-ASSET-0000050-000005,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000053,DELAYED_RETURN,CustodyEvent,ASSET-0000056,CUST-ASSET-0000056-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000054,OVERDUE_RETURN,ReturnAuthorization,RMA-2026-000067,RMA-2026-000067,OVERDUE_RETURN,Escalate as overdue after the expected return date; do not mark lost before threshold.
+GT-0000055,DISPUTED_CUSTODY_HANDOFF,CustodyEvent,ASSET-0000057,CUST-ASSET-0000057-000010,DISPUTED_CUSTODY_HANDOFF,Hold the last verified location and block subsequent custody transitions until resolution.
+GT-0000056,DAMAGED_ASSET,ReusableAsset,ASSET-0000059,INSP-2026-000015,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000057,DELAYED_RETURN,CustodyEvent,ASSET-0000059,CUST-ASSET-0000059-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000058,DELAYED_RETURN,CustodyEvent,ASSET-0000060,CUST-ASSET-0000060-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000059,LOST_ASSET,ReusableAsset,ASSET-0000061,CUST-ASSET-0000061-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000060,DAMAGED_ASSET,ReusableAsset,ASSET-0000062,INSP-2026-000016,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000061,OPEN_REPAIR,Repair,REP-2026-000008,REP-2026-000008,OPEN_REPAIR,Keep the deposit unsettled until the repair is closed.
+GT-0000062,DELAYED_RETURN,CustodyEvent,ASSET-0000062,CUST-ASSET-0000062-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000063,DELAYED_RETURN,CustodyEvent,ASSET-0000063,CUST-ASSET-0000063-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000064,DAMAGED_ASSET,ReusableAsset,ASSET-0000064,INSP-2026-000017,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000065,DELAYED_RETURN,CustodyEvent,ASSET-0000066,CUST-ASSET-0000066-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000066,LOST_ASSET,ReusableAsset,ASSET-0000067,CUST-ASSET-0000067-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000067,DAMAGED_ASSET,ReusableAsset,ASSET-0000068,INSP-2026-000018,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000068,DAMAGED_ASSET,ReusableAsset,ASSET-0000071,INSP-2026-000019,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000069,LOST_ASSET,ReusableAsset,ASSET-0000072,CUST-ASSET-0000072-000007,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000070,LOST_ASSET,ReusableAsset,ASSET-0000073,CUST-ASSET-0000073-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000071,DELAYED_RETURN,CustodyEvent,ASSET-0000074,CUST-ASSET-0000074-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000072,LOST_ASSET,ReusableAsset,ASSET-0000078,CUST-ASSET-0000078-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000073,DAMAGED_ASSET,ReusableAsset,ASSET-0000079,INSP-2026-000020,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000074,OPEN_REPAIR,Repair,REP-2026-000012,REP-2026-000012,OPEN_REPAIR,Keep the deposit unsettled until the repair is closed.
+GT-0000075,DELAYED_RETURN,CustodyEvent,ASSET-0000079,CUST-ASSET-0000079-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000076,DELAYED_RETURN,CustodyEvent,ASSET-0000080,CUST-ASSET-0000080-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000077,DAMAGED_ASSET,ReusableAsset,ASSET-0000083,INSP-2026-000021,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000078,DAMAGED_ASSET,ReusableAsset,ASSET-0000083,INSP-2026-000022,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000079,DELAYED_RETURN,CustodyEvent,ASSET-0000086,CUST-ASSET-0000086-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000080,DELAYED_RETURN,CustodyEvent,ASSET-0000086,CUST-ASSET-0000086-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000081,DELAYED_RETURN,CustodyEvent,ASSET-0000087,CUST-ASSET-0000087-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000082,DAMAGED_ASSET,ReusableAsset,ASSET-0000088,INSP-2026-000023,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000083,DELAYED_RETURN,CustodyEvent,ASSET-0000089,CUST-ASSET-0000089-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000084,DAMAGED_ASSET,ReusableAsset,ASSET-0000089,INSP-2026-000024,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000085,OPEN_REPAIR,Repair,REP-2026-000016,REP-2026-000016,OPEN_REPAIR,Keep the deposit unsettled until the repair is closed.
+GT-0000086,DELAYED_RETURN,CustodyEvent,ASSET-0000089,CUST-ASSET-0000089-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000087,DELAYED_RETURN,CustodyEvent,ASSET-0000090,CUST-ASSET-0000090-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000088,DELAYED_RETURN,CustodyEvent,ASSET-0000091,CUST-ASSET-0000091-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000089,LOST_ASSET,ReusableAsset,ASSET-0000092,CUST-ASSET-0000092-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000090,DELAYED_RETURN,CustodyEvent,ASSET-0000093,CUST-ASSET-0000093-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000091,DELAYED_RETURN,CustodyEvent,ASSET-0000094,CUST-ASSET-0000094-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000092,DELAYED_RETURN,CustodyEvent,ASSET-0000095,CUST-ASSET-0000095-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000093,DAMAGED_ASSET,ReusableAsset,ASSET-0000097,INSP-2026-000025,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000094,DELAYED_RETURN,CustodyEvent,ASSET-0000097,CUST-ASSET-0000097-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000095,DAMAGED_ASSET,ReusableAsset,ASSET-0000098,INSP-2026-000026,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000096,OPEN_REPAIR,Repair,REP-2026-000018,REP-2026-000018,OPEN_REPAIR,Keep the deposit unsettled until the repair is closed.
+GT-0000097,DAMAGED_ASSET,ReusableAsset,ASSET-0000102,INSP-2026-000027,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000098,LOST_ASSET,ReusableAsset,ASSET-0000104,CUST-ASSET-0000104-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000099,DELAYED_RETURN,CustodyEvent,ASSET-0000105,CUST-ASSET-0000105-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000100,DAMAGED_ASSET,ReusableAsset,ASSET-0000105,INSP-2026-000028,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000101,DELAYED_RETURN,CustodyEvent,ASSET-0000105,CUST-ASSET-0000105-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000102,DISPUTED_CUSTODY_HANDOFF,CustodyEvent,ASSET-0000105,CUST-ASSET-0000105-000010,DISPUTED_CUSTODY_HANDOFF,Hold the last verified location and block subsequent custody transitions until resolution.
+GT-0000103,DELAYED_RETURN,CustodyEvent,ASSET-0000105,CUST-ASSET-0000105-000013,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000104,DAMAGED_ASSET,ReusableAsset,ASSET-0000108,INSP-2026-000029,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000105,DELAYED_RETURN,CustodyEvent,ASSET-0000108,CUST-ASSET-0000108-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000106,DAMAGED_ASSET,ReusableAsset,ASSET-0000108,INSP-2026-000030,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000107,DELAYED_RETURN,CustodyEvent,ASSET-0000108,CUST-ASSET-0000108-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000108,DELAYED_RETURN,CustodyEvent,ASSET-0000109,CUST-ASSET-0000109-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000109,DELAYED_RETURN,CustodyEvent,ASSET-0000110,CUST-ASSET-0000110-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000110,DELAYED_RETURN,CustodyEvent,ASSET-0000112,CUST-ASSET-0000112-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000111,DISPUTED_CUSTODY_HANDOFF,CustodyEvent,ASSET-0000112,CUST-ASSET-0000112-000010,DISPUTED_CUSTODY_HANDOFF,Hold the last verified location and block subsequent custody transitions until resolution.
+GT-0000112,DELAYED_RETURN,CustodyEvent,ASSET-0000113,CUST-ASSET-0000113-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000113,DELAYED_RETURN,CustodyEvent,ASSET-0000116,CUST-ASSET-0000116-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000114,DELAYED_RETURN,CustodyEvent,ASSET-0000118,CUST-ASSET-0000118-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000115,DELAYED_RETURN,CustodyEvent,ASSET-0000118,CUST-ASSET-0000118-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000116,DAMAGED_ASSET,ReusableAsset,ASSET-0000120,INSP-2026-000031,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000117,DISPUTED_CUSTODY_HANDOFF,CustodyEvent,ASSET-0000120,CUST-ASSET-0000120-000002,DISPUTED_CUSTODY_HANDOFF,Hold the last verified location and block subsequent custody transitions until resolution.
+GT-0000118,DELAYED_RETURN,CustodyEvent,ASSET-0000120,CUST-ASSET-0000120-000005,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000119,DELAYED_RETURN,CustodyEvent,ASSET-0000125,CUST-ASSET-0000125-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000120,DELAYED_RETURN,CustodyEvent,ASSET-0000126,CUST-ASSET-0000126-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000121,DAMAGED_ASSET,ReusableAsset,ASSET-0000128,INSP-2026-000032,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000122,OPEN_REPAIR,Repair,REP-2026-000019,REP-2026-000019,OPEN_REPAIR,Keep the deposit unsettled until the repair is closed.
+GT-0000123,DELAYED_RETURN,CustodyEvent,ASSET-0000132,CUST-ASSET-0000132-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000124,LOST_ASSET,ReusableAsset,ASSET-0000133,CUST-ASSET-0000133-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000125,DAMAGED_ASSET,ReusableAsset,ASSET-0000135,INSP-2026-000033,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000126,LOST_ASSET,ReusableAsset,ASSET-0000137,CUST-ASSET-0000137-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000127,DELAYED_RETURN,CustodyEvent,ASSET-0000138,CUST-ASSET-0000138-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000128,DELAYED_RETURN,CustodyEvent,ASSET-0000144,CUST-ASSET-0000144-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000129,DAMAGED_ASSET,ReusableAsset,ASSET-0000145,INSP-2026-000034,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000130,DELAYED_RETURN,CustodyEvent,ASSET-0000145,CUST-ASSET-0000145-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000131,DELAYED_RETURN,CustodyEvent,ASSET-0000146,CUST-ASSET-0000146-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000132,DELAYED_RETURN,CustodyEvent,ASSET-0000146,CUST-ASSET-0000146-000012,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000133,DELAYED_RETURN,CustodyEvent,ASSET-0000148,CUST-ASSET-0000148-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000134,LOST_ASSET,ReusableAsset,ASSET-0000150,CUST-ASSET-0000150-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000135,DELAYED_RETURN,CustodyEvent,ASSET-0000151,CUST-ASSET-0000151-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000136,DELAYED_RETURN,CustodyEvent,ASSET-0000152,CUST-ASSET-0000152-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000137,DELAYED_RETURN,CustodyEvent,ASSET-0000154,CUST-ASSET-0000154-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000138,DELAYED_RETURN,CustodyEvent,ASSET-0000155,CUST-ASSET-0000155-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000139,DELAYED_RETURN,CustodyEvent,ASSET-0000155,CUST-ASSET-0000155-000012,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000140,DELAYED_RETURN,CustodyEvent,ASSET-0000156,CUST-ASSET-0000156-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000141,DELAYED_RETURN,CustodyEvent,ASSET-0000157,CUST-ASSET-0000157-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000142,DAMAGED_ASSET,ReusableAsset,ASSET-0000159,INSP-2026-000035,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000143,DELAYED_RETURN,CustodyEvent,ASSET-0000160,CUST-ASSET-0000160-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000144,DELAYED_RETURN,CustodyEvent,ASSET-0000161,CUST-ASSET-0000161-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000145,DELAYED_RETURN,CustodyEvent,ASSET-0000164,CUST-ASSET-0000164-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000146,DELAYED_RETURN,CustodyEvent,ASSET-0000168,CUST-ASSET-0000168-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000147,DELAYED_RETURN,CustodyEvent,ASSET-0000169,CUST-ASSET-0000169-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000148,DISPUTED_CUSTODY_HANDOFF,CustodyEvent,ASSET-0000170,CUST-ASSET-0000170-000002,DISPUTED_CUSTODY_HANDOFF,Hold the last verified location and block subsequent custody transitions until resolution.
+GT-0000149,DELAYED_RETURN,CustodyEvent,ASSET-0000170,CUST-ASSET-0000170-000005,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000150,OVERDUE_RETURN,ReturnAuthorization,RMA-2026-000204,RMA-2026-000204,OVERDUE_RETURN,Escalate as overdue after the expected return date; do not mark lost before threshold.
+GT-0000151,DISPUTED_CUSTODY_HANDOFF,CustodyEvent,ASSET-0000170,CUST-ASSET-0000170-000011,DISPUTED_CUSTODY_HANDOFF,Hold the last verified location and block subsequent custody transitions until resolution.
+GT-0000152,DELAYED_RETURN,CustodyEvent,ASSET-0000173,CUST-ASSET-0000173-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000153,DELAYED_RETURN,CustodyEvent,ASSET-0000178,CUST-ASSET-0000178-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000154,DELAYED_RETURN,CustodyEvent,ASSET-0000182,CUST-ASSET-0000182-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000155,DAMAGED_ASSET,ReusableAsset,ASSET-0000182,INSP-2026-000036,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000156,OPEN_REPAIR,Repair,REP-2026-000021,REP-2026-000021,OPEN_REPAIR,Keep the deposit unsettled until the repair is closed.
+GT-0000157,DAMAGED_ASSET,ReusableAsset,ASSET-0000183,INSP-2026-000037,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000158,DELAYED_RETURN,CustodyEvent,ASSET-0000185,CUST-ASSET-0000185-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000159,DELAYED_RETURN,CustodyEvent,ASSET-0000188,CUST-ASSET-0000188-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000160,DAMAGED_ASSET,ReusableAsset,ASSET-0000190,INSP-2026-000038,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000161,DELAYED_RETURN,CustodyEvent,ASSET-0000190,CUST-ASSET-0000190-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000162,DELAYED_RETURN,CustodyEvent,ASSET-0000191,CUST-ASSET-0000191-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000163,LOST_ASSET,ReusableAsset,ASSET-0000192,CUST-ASSET-0000192-000003,LOSS_EVENT_PENDING,Declare loss exactly at the type-specific threshold and forfeit the deposit.
+GT-0000164,DELAYED_RETURN,CustodyEvent,ASSET-0000193,CUST-ASSET-0000193-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000165,DELAYED_RETURN,CustodyEvent,ASSET-0000194,CUST-ASSET-0000194-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000166,DAMAGED_ASSET,ReusableAsset,ASSET-0000194,INSP-2026-000039,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000167,DELAYED_RETURN,CustodyEvent,ASSET-0000194,CUST-ASSET-0000194-000008,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000168,DISPUTED_CUSTODY_HANDOFF,CustodyEvent,ASSET-0000196,CUST-ASSET-0000196-000002,DISPUTED_CUSTODY_HANDOFF,Hold the last verified location and block subsequent custody transitions until resolution.
+GT-0000169,DELAYED_RETURN,CustodyEvent,ASSET-0000196,CUST-ASSET-0000196-000005,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000170,DAMAGED_ASSET,ReusableAsset,ASSET-0000197,INSP-2026-000040,DAMAGED_ASSET,Apply repair or quarantine deductions after required settlement evidence.
+GT-0000171,OPEN_REPAIR,Repair,REP-2026-000024,REP-2026-000024,OPEN_REPAIR,Keep the deposit unsettled until the repair is closed.
+GT-0000172,DELAYED_RETURN,CustodyEvent,ASSET-0000198,CUST-ASSET-0000198-000004,DELAYED_RETURN,Apply the type-specific late fee and record the actual return date.
+GT-0000173,SIMULTANEOUS_LOCATIONS,CustodyEvent,ASSET-0000157,CUST-ASSET-0000157-000005,SIMULTANEOUS_LOCATIONS,Review the conflicting custody observations; use deterministic event replay and retain the audit trail.
+GT-0000174,RETURN_BEFORE_DISPATCH,CustodyEvent,ASSET-0000189,CUST-ASSET-0000189-000004,RETURN_BEFORE_DISPATCH,Quarantine the return chronology for correction before accepting the return.
+GT-0000175,DUPLICATE_DEPOSIT_REFUND,DepositLedger,ASSET-0000200,DLG-2026-00000577,DUPLICATE_DEPOSIT_REFUND,Hold the duplicate refund and reconcile against the original charge.
+GT-0000176,REPAIR_WITHOUT_INSPECTION,Repair,ASSET-0000088,REP-2026-000015,REPAIR_WITHOUT_INSPECTION,Block repair closure until valid inspection evidence is linked.
+GT-0000177,CUSTODY_ACTOR_MISSING,CustodyEvent,ASSET-0000139,CUST-ASSET-0000139-000003,CUSTODY_ACTOR_MISSING,Request actor attribution; retain the event without inventing an actor.

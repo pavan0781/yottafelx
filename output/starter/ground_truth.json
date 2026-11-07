@@ -2,617 +2,1594 @@
   {
     "entity_id": "ASSET-0000001",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Flag conflicting current locations; do not silently select one.",
-    "ground_truth": "EXCEPTION",
-    "issue_id": "GT-000001",
-    "issue_type": "SIMULTANEOUS_LOCATIONS"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000001",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000001"
+  },
+  {
+    "entity_id": "ASSET-0000001",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Hold the last verified location and block subsequent custody transitions until resolution.",
+    "ground_truth": "DISPUTED_CUSTODY_HANDOFF",
+    "issue_id": "GT-0000002",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF",
+    "offending_record_id": "CUST-ASSET-0000001-000002"
+  },
+  {
+    "entity_id": "ASSET-0000001",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000003",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000001-000005"
+  },
+  {
+    "entity_id": "ASSET-0000001",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000004",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000002"
+  },
+  {
+    "entity_id": "ASSET-0000001",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000005",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000001-000013"
   },
   {
     "entity_id": "ASSET-0000002",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Reject or quarantine return chronology.",
-    "ground_truth": "EXCEPTION",
-    "issue_id": "GT-000002",
-    "issue_type": "RETURN_BEFORE_DISPATCH"
-  },
-  {
-    "entity_id": "ASSET-0000003",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Flag the second refund and retain both ledger entries.",
-    "ground_truth": "EXCEPTION",
-    "issue_id": "GT-000003",
-    "issue_type": "DUPLICATE_DEPOSIT_REFUND"
-  },
-  {
-    "entity_id": "ASSET-0000003",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000004",
-    "issue_type": "DELAYED_RETURN"
-  },
-  {
-    "entity_id": "ASSET-0000003",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000005",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000006",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000002-000007"
   },
   {
     "entity_id": "ASSET-0000004",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Block repair closure pending inspection evidence.",
-    "ground_truth": "EXCEPTION",
-    "issue_id": "GT-000006",
-    "issue_type": "REPAIR_WITHOUT_INSPECTION"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000007",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000004-000004"
   },
   {
-    "entity_id": "ASSET-0000004",
+    "entity_id": "ASSET-0000006",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000007",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000008",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000003"
   },
   {
-    "entity_id": "ASSET-0000005",
+    "entity_id": "ASSET-0000006",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000009",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000006-000004"
+  },
+  {
+    "entity_id": "ASSET-0000009",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Flag the custody event for attribution.",
-    "ground_truth": "EXCEPTION",
-    "issue_id": "GT-000008",
-    "issue_type": "CUSTODY_ACTOR_MISSING"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000010",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000004"
+  },
+  {
+    "entity_id": "ASSET-0000009",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000011",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000009-000004"
+  },
+  {
+    "entity_id": "ASSET-0000010",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000012",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000010-000004"
   },
   {
     "entity_id": "ASSET-0000011",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000009",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000013",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000005"
+  },
+  {
+    "entity_id": "ASSET-0000011",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000014",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000011-000004"
+  },
+  {
+    "entity_id": "ASSET-0000012",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000015",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000012-000003"
   },
   {
     "entity_id": "ASSET-0000013",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
-    "ground_truth": "LOST",
-    "issue_id": "GT-000010",
-    "issue_type": "LOST_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000016",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000013-000004"
   },
   {
     "entity_id": "ASSET-0000014",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000011",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000017",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000006"
   },
   {
-    "entity_id": "ASSET-0000017",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000012",
-    "issue_type": "DELAYED_RETURN"
+    "entity_id": "REP-2026-000004",
+    "entity_type": "Repair",
+    "expected_decision": "Keep the deposit unsettled until the repair is closed.",
+    "ground_truth": "OPEN_REPAIR",
+    "issue_id": "GT-0000018",
+    "issue_type": "OPEN_REPAIR",
+    "offending_record_id": "REP-2026-000004"
   },
   {
-    "entity_id": "ASSET-0000017",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000013",
-    "issue_type": "DAMAGED_ASSET"
+    "entity_id": "ASSET-0000014",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000019",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000014-000004"
   },
   {
-    "entity_id": "ASSET-0000028",
+    "entity_id": "ASSET-0000016",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000014",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000020",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000007"
+  },
+  {
+    "entity_id": "ASSET-0000018",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000021",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000008"
+  },
+  {
+    "entity_id": "ASSET-0000020",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000022",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000020-000004"
+  },
+  {
+    "entity_id": "ASSET-0000021",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000023",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000021-000004"
+  },
+  {
+    "entity_id": "ASSET-0000023",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000024",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000023-000004"
+  },
+  {
+    "entity_id": "ASSET-0000024",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000025",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000024-000004"
+  },
+  {
+    "entity_id": "ASSET-0000025",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000026",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000025-000004"
+  },
+  {
+    "entity_id": "ASSET-0000026",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000027",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000026-000004"
+  },
+  {
+    "entity_id": "ASSET-0000027",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000028",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000009"
   },
   {
     "entity_id": "ASSET-0000030",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000015",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000029",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000010"
+  },
+  {
+    "entity_id": "ASSET-0000030",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000030",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000030-000004"
+  },
+  {
+    "entity_id": "ASSET-0000032",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000031",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000032-000003"
+  },
+  {
+    "entity_id": "ASSET-0000033",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000032",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000033-000004"
+  },
+  {
+    "entity_id": "ASSET-0000035",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000033",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000035-000004"
   },
   {
     "entity_id": "ASSET-0000037",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000034",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000037-000004"
+  },
+  {
+    "entity_id": "ASSET-0000038",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000035",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000038-000004"
+  },
+  {
+    "entity_id": "ASSET-0000039",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000036",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000039-000004"
+  },
+  {
+    "entity_id": "ASSET-0000039",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
-    "ground_truth": "LOST",
-    "issue_id": "GT-000016",
-    "issue_type": "LOST_ASSET"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000037",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000011"
+  },
+  {
+    "entity_id": "ASSET-0000039",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000038",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000039-000008"
   },
   {
     "entity_id": "ASSET-0000041",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000017",
-    "issue_type": "DAMAGED_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000039",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000041-000004"
+  },
+  {
+    "entity_id": "ASSET-0000042",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000040",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000042-000004"
   },
   {
     "entity_id": "ASSET-0000043",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000018",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000041",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000043-000003"
   },
   {
-    "entity_id": "ASSET-0000044",
+    "entity_id": "ASSET-0000045",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000019",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000042",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000012"
+  },
+  {
+    "entity_id": "ASSET-0000045",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000043",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000045-000004"
   },
   {
     "entity_id": "ASSET-0000046",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
-    "ground_truth": "LOST",
-    "issue_id": "GT-000020",
-    "issue_type": "LOST_ASSET"
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000044",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000046-000003"
   },
   {
     "entity_id": "ASSET-0000047",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000045",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000047-000004"
+  },
+  {
+    "entity_id": "ASSET-0000048",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000021",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000046",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000013"
+  },
+  {
+    "entity_id": "ASSET-0000049",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000047",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000014"
+  },
+  {
+    "entity_id": "ASSET-0000049",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000048",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000049-000008"
+  },
+  {
+    "entity_id": "RMA-2026-000057",
+    "entity_type": "ReturnAuthorization",
+    "expected_decision": "Escalate as overdue after the expected return date; do not mark lost before threshold.",
+    "ground_truth": "OVERDUE_RETURN",
+    "issue_id": "GT-0000049",
+    "issue_type": "OVERDUE_RETURN",
+    "offending_record_id": "RMA-2026-000057"
+  },
+  {
+    "entity_id": "ASSET-0000049",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Hold the last verified location and block subsequent custody transitions until resolution.",
+    "ground_truth": "DISPUTED_CUSTODY_HANDOFF",
+    "issue_id": "GT-0000050",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF",
+    "offending_record_id": "CUST-ASSET-0000049-000010"
   },
   {
     "entity_id": "ASSET-0000050",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000022",
-    "issue_type": "DAMAGED_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Hold the last verified location and block subsequent custody transitions until resolution.",
+    "ground_truth": "DISPUTED_CUSTODY_HANDOFF",
+    "issue_id": "GT-0000051",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF",
+    "offending_record_id": "CUST-ASSET-0000050-000002"
   },
   {
-    "entity_id": "ASSET-0000051",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
-    "ground_truth": "LOST",
-    "issue_id": "GT-000023",
-    "issue_type": "LOST_ASSET"
+    "entity_id": "ASSET-0000050",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000052",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000050-000005"
   },
   {
     "entity_id": "ASSET-0000056",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000024",
-    "issue_type": "DELAYED_RETURN"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000053",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000056-000004"
   },
   {
-    "entity_id": "ASSET-0000058",
+    "entity_id": "RMA-2026-000067",
+    "entity_type": "ReturnAuthorization",
+    "expected_decision": "Escalate as overdue after the expected return date; do not mark lost before threshold.",
+    "ground_truth": "OVERDUE_RETURN",
+    "issue_id": "GT-0000054",
+    "issue_type": "OVERDUE_RETURN",
+    "offending_record_id": "RMA-2026-000067"
+  },
+  {
+    "entity_id": "ASSET-0000057",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Hold the last verified location and block subsequent custody transitions until resolution.",
+    "ground_truth": "DISPUTED_CUSTODY_HANDOFF",
+    "issue_id": "GT-0000055",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF",
+    "offending_record_id": "CUST-ASSET-0000057-000010"
+  },
+  {
+    "entity_id": "ASSET-0000059",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Escalate the handoff for operator confirmation.",
-    "ground_truth": "DISPUTED",
-    "issue_id": "GT-000025",
-    "issue_type": "DISPUTED_CUSTODY_HANDOFF"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000056",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000015"
+  },
+  {
+    "entity_id": "ASSET-0000059",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000057",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000059-000004"
+  },
+  {
+    "entity_id": "ASSET-0000060",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000058",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000060-000004"
+  },
+  {
+    "entity_id": "ASSET-0000061",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000059",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000061-000003"
+  },
+  {
+    "entity_id": "ASSET-0000062",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000060",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000016"
+  },
+  {
+    "entity_id": "REP-2026-000008",
+    "entity_type": "Repair",
+    "expected_decision": "Keep the deposit unsettled until the repair is closed.",
+    "ground_truth": "OPEN_REPAIR",
+    "issue_id": "GT-0000061",
+    "issue_type": "OPEN_REPAIR",
+    "offending_record_id": "REP-2026-000008"
+  },
+  {
+    "entity_id": "ASSET-0000062",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000062",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000062-000004"
+  },
+  {
+    "entity_id": "ASSET-0000063",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000063",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000063-000004"
   },
   {
     "entity_id": "ASSET-0000064",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000026",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000064",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000017"
+  },
+  {
+    "entity_id": "ASSET-0000066",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000065",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000066-000004"
   },
   {
     "entity_id": "ASSET-0000067",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000027",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000066",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000067-000003"
+  },
+  {
+    "entity_id": "ASSET-0000068",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000067",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000018"
+  },
+  {
+    "entity_id": "ASSET-0000071",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000068",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000019"
   },
   {
     "entity_id": "ASSET-0000072",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000028",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000069",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000072-000007"
+  },
+  {
+    "entity_id": "ASSET-0000073",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000070",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000073-000003"
+  },
+  {
+    "entity_id": "ASSET-0000074",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000071",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000074-000004"
   },
   {
     "entity_id": "ASSET-0000078",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000029",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000072",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000078-000003"
+  },
+  {
+    "entity_id": "ASSET-0000079",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000073",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000020"
+  },
+  {
+    "entity_id": "REP-2026-000012",
+    "entity_type": "Repair",
+    "expected_decision": "Keep the deposit unsettled until the repair is closed.",
+    "ground_truth": "OPEN_REPAIR",
+    "issue_id": "GT-0000074",
+    "issue_type": "OPEN_REPAIR",
+    "offending_record_id": "REP-2026-000012"
+  },
+  {
+    "entity_id": "ASSET-0000079",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000075",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000079-000004"
   },
   {
     "entity_id": "ASSET-0000080",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
-    "ground_truth": "LOST",
-    "issue_id": "GT-000030",
-    "issue_type": "LOST_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000076",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000080-000004"
   },
   {
-    "entity_id": "ASSET-0000084",
+    "entity_id": "ASSET-0000083",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000031",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000077",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000021"
+  },
+  {
+    "entity_id": "ASSET-0000083",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000078",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000022"
+  },
+  {
+    "entity_id": "ASSET-0000086",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000079",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000086-000004"
+  },
+  {
+    "entity_id": "ASSET-0000086",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000080",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000086-000008"
+  },
+  {
+    "entity_id": "ASSET-0000087",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000081",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000087-000004"
   },
   {
     "entity_id": "ASSET-0000088",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000032",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000082",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000023"
+  },
+  {
+    "entity_id": "ASSET-0000089",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000083",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000089-000004"
   },
   {
     "entity_id": "ASSET-0000089",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000033",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000084",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000024"
+  },
+  {
+    "entity_id": "REP-2026-000016",
+    "entity_type": "Repair",
+    "expected_decision": "Keep the deposit unsettled until the repair is closed.",
+    "ground_truth": "OPEN_REPAIR",
+    "issue_id": "GT-0000085",
+    "issue_type": "OPEN_REPAIR",
+    "offending_record_id": "REP-2026-000016"
+  },
+  {
+    "entity_id": "ASSET-0000089",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000086",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000089-000008"
+  },
+  {
+    "entity_id": "ASSET-0000090",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000087",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000090-000004"
   },
   {
     "entity_id": "ASSET-0000091",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
-    "ground_truth": "LOST",
-    "issue_id": "GT-000034",
-    "issue_type": "LOST_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000088",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000091-000004"
   },
   {
     "entity_id": "ASSET-0000092",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000035",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000089",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000092-000003"
   },
   {
     "entity_id": "ASSET-0000093",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000036",
-    "issue_type": "DAMAGED_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000090",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000093-000004"
+  },
+  {
+    "entity_id": "ASSET-0000094",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000091",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000094-000004"
   },
   {
     "entity_id": "ASSET-0000095",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000037",
-    "issue_type": "DELAYED_RETURN"
-  },
-  {
-    "entity_id": "ASSET-0000096",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
-    "ground_truth": "LOST",
-    "issue_id": "GT-000038",
-    "issue_type": "LOST_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000092",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000095-000004"
   },
   {
     "entity_id": "ASSET-0000097",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000039",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000093",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000025"
   },
   {
-    "entity_id": "ASSET-0000103",
+    "entity_id": "ASSET-0000097",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000094",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000097-000004"
+  },
+  {
+    "entity_id": "ASSET-0000098",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Escalate the handoff for operator confirmation.",
-    "ground_truth": "DISPUTED",
-    "issue_id": "GT-000040",
-    "issue_type": "DISPUTED_CUSTODY_HANDOFF"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000095",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000026"
+  },
+  {
+    "entity_id": "REP-2026-000018",
+    "entity_type": "Repair",
+    "expected_decision": "Keep the deposit unsettled until the repair is closed.",
+    "ground_truth": "OPEN_REPAIR",
+    "issue_id": "GT-0000096",
+    "issue_type": "OPEN_REPAIR",
+    "offending_record_id": "REP-2026-000018"
+  },
+  {
+    "entity_id": "ASSET-0000102",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000097",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000027"
+  },
+  {
+    "entity_id": "ASSET-0000104",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000098",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000104-000003"
+  },
+  {
+    "entity_id": "ASSET-0000105",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000099",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000105-000004"
+  },
+  {
+    "entity_id": "ASSET-0000105",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000100",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000028"
+  },
+  {
+    "entity_id": "ASSET-0000105",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000101",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000105-000008"
+  },
+  {
+    "entity_id": "ASSET-0000105",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Hold the last verified location and block subsequent custody transitions until resolution.",
+    "ground_truth": "DISPUTED_CUSTODY_HANDOFF",
+    "issue_id": "GT-0000102",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF",
+    "offending_record_id": "CUST-ASSET-0000105-000010"
+  },
+  {
+    "entity_id": "ASSET-0000105",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000103",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000105-000013"
   },
   {
     "entity_id": "ASSET-0000108",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000041",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000104",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000029"
+  },
+  {
+    "entity_id": "ASSET-0000108",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000105",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000108-000004"
+  },
+  {
+    "entity_id": "ASSET-0000108",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000106",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000030"
+  },
+  {
+    "entity_id": "ASSET-0000108",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000107",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000108-000008"
   },
   {
     "entity_id": "ASSET-0000109",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000042",
-    "issue_type": "DELAYED_RETURN"
-  },
-  {
-    "entity_id": "ASSET-0000109",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Escalate the handoff for operator confirmation.",
-    "ground_truth": "DISPUTED",
-    "issue_id": "GT-000043",
-    "issue_type": "DISPUTED_CUSTODY_HANDOFF"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000108",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000109-000008"
   },
   {
     "entity_id": "ASSET-0000110",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000044",
-    "issue_type": "DELAYED_RETURN"
-  },
-  {
-    "entity_id": "ASSET-0000111",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000045",
-    "issue_type": "DAMAGED_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000109",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000110-000004"
   },
   {
     "entity_id": "ASSET-0000112",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000046",
-    "issue_type": "DAMAGED_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000110",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000112-000004"
+  },
+  {
+    "entity_id": "ASSET-0000112",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Hold the last verified location and block subsequent custody transitions until resolution.",
+    "ground_truth": "DISPUTED_CUSTODY_HANDOFF",
+    "issue_id": "GT-0000111",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF",
+    "offending_record_id": "CUST-ASSET-0000112-000010"
+  },
+  {
+    "entity_id": "ASSET-0000113",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000112",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000113-000004"
   },
   {
     "entity_id": "ASSET-0000116",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000047",
-    "issue_type": "DAMAGED_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000113",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000116-000004"
   },
   {
     "entity_id": "ASSET-0000118",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000048",
-    "issue_type": "DELAYED_RETURN"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000114",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000118-000004"
   },
   {
-    "entity_id": "ASSET-0000119",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000049",
-    "issue_type": "DELAYED_RETURN"
+    "entity_id": "ASSET-0000118",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000115",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000118-000008"
   },
   {
-    "entity_id": "ASSET-0000121",
+    "entity_id": "ASSET-0000120",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
-    "ground_truth": "LOST",
-    "issue_id": "GT-000050",
-    "issue_type": "LOST_ASSET"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000116",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000031"
   },
   {
-    "entity_id": "ASSET-0000122",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000051",
-    "issue_type": "DAMAGED_ASSET"
+    "entity_id": "ASSET-0000120",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Hold the last verified location and block subsequent custody transitions until resolution.",
+    "ground_truth": "DISPUTED_CUSTODY_HANDOFF",
+    "issue_id": "GT-0000117",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF",
+    "offending_record_id": "CUST-ASSET-0000120-000002"
   },
   {
-    "entity_id": "ASSET-0000130",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000052",
-    "issue_type": "DELAYED_RETURN"
+    "entity_id": "ASSET-0000120",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000118",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000120-000005"
   },
   {
-    "entity_id": "ASSET-0000136",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000053",
-    "issue_type": "DELAYED_RETURN"
+    "entity_id": "ASSET-0000125",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000119",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000125-000004"
   },
   {
-    "entity_id": "ASSET-0000139",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000054",
-    "issue_type": "DELAYED_RETURN"
+    "entity_id": "ASSET-0000126",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000120",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000126-000004"
   },
   {
-    "entity_id": "ASSET-0000141",
+    "entity_id": "ASSET-0000128",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000055",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000121",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000032"
   },
   {
-    "entity_id": "ASSET-0000143",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000056",
-    "issue_type": "DELAYED_RETURN"
+    "entity_id": "REP-2026-000019",
+    "entity_type": "Repair",
+    "expected_decision": "Keep the deposit unsettled until the repair is closed.",
+    "ground_truth": "OPEN_REPAIR",
+    "issue_id": "GT-0000122",
+    "issue_type": "OPEN_REPAIR",
+    "offending_record_id": "REP-2026-000019"
   },
   {
-    "entity_id": "ASSET-0000143",
+    "entity_id": "ASSET-0000132",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000123",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000132-000004"
+  },
+  {
+    "entity_id": "ASSET-0000133",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000057",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000124",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000133-000003"
+  },
+  {
+    "entity_id": "ASSET-0000135",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000125",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000033"
+  },
+  {
+    "entity_id": "ASSET-0000137",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000126",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000137-000003"
+  },
+  {
+    "entity_id": "ASSET-0000138",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000127",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000138-000004"
+  },
+  {
+    "entity_id": "ASSET-0000144",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000128",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000144-000004"
+  },
+  {
+    "entity_id": "ASSET-0000145",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000129",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000034"
+  },
+  {
+    "entity_id": "ASSET-0000145",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000130",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000145-000004"
+  },
+  {
+    "entity_id": "ASSET-0000146",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000131",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000146-000008"
+  },
+  {
+    "entity_id": "ASSET-0000146",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000132",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000146-000012"
   },
   {
     "entity_id": "ASSET-0000148",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000058",
-    "issue_type": "DELAYED_RETURN"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000133",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000148-000004"
   },
   {
-    "entity_id": "ASSET-0000149",
+    "entity_id": "ASSET-0000150",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000059",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000134",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000150-000003"
   },
   {
     "entity_id": "ASSET-0000151",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000060",
-    "issue_type": "DELAYED_RETURN"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000135",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000151-000004"
+  },
+  {
+    "entity_id": "ASSET-0000152",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000136",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000152-000004"
   },
   {
     "entity_id": "ASSET-0000154",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000061",
-    "issue_type": "DELAYED_RETURN"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000137",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000154-000004"
   },
   {
     "entity_id": "ASSET-0000155",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000062",
-    "issue_type": "DELAYED_RETURN"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000138",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000155-000004"
+  },
+  {
+    "entity_id": "ASSET-0000155",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000139",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000155-000012"
   },
   {
     "entity_id": "ASSET-0000156",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000063",
-    "issue_type": "DAMAGED_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000140",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000156-000004"
   },
   {
     "entity_id": "ASSET-0000157",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000064",
-    "issue_type": "DELAYED_RETURN"
-  },
-  {
-    "entity_id": "ASSET-0000157",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000065",
-    "issue_type": "DAMAGED_ASSET"
-  },
-  {
-    "entity_id": "ASSET-0000157",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Escalate the handoff for operator confirmation.",
-    "ground_truth": "DISPUTED",
-    "issue_id": "GT-000066",
-    "issue_type": "DISPUTED_CUSTODY_HANDOFF"
-  },
-  {
-    "entity_id": "ASSET-0000158",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000067",
-    "issue_type": "DELAYED_RETURN"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000141",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000157-000004"
   },
   {
     "entity_id": "ASSET-0000159",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000068",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000142",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000035"
+  },
+  {
+    "entity_id": "ASSET-0000160",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000143",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000160-000004"
+  },
+  {
+    "entity_id": "ASSET-0000161",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000144",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000161-000004"
   },
   {
     "entity_id": "ASSET-0000164",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000069",
-    "issue_type": "DELAYED_RETURN"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000145",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000164-000004"
+  },
+  {
+    "entity_id": "ASSET-0000168",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000146",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000168-000004"
   },
   {
     "entity_id": "ASSET-0000169",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
-    "ground_truth": "LOST",
-    "issue_id": "GT-000070",
-    "issue_type": "LOST_ASSET"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000147",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000169-000004"
   },
   {
-    "entity_id": "ASSET-0000171",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000071",
-    "issue_type": "DELAYED_RETURN"
+    "entity_id": "ASSET-0000170",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Hold the last verified location and block subsequent custody transitions until resolution.",
+    "ground_truth": "DISPUTED_CUSTODY_HANDOFF",
+    "issue_id": "GT-0000148",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF",
+    "offending_record_id": "CUST-ASSET-0000170-000002"
   },
   {
-    "entity_id": "ASSET-0000172",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000072",
-    "issue_type": "DELAYED_RETURN"
+    "entity_id": "ASSET-0000170",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000149",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000170-000005"
   },
   {
-    "entity_id": "ASSET-0000175",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Escalate the handoff for operator confirmation.",
-    "ground_truth": "DISPUTED",
-    "issue_id": "GT-000073",
-    "issue_type": "DISPUTED_CUSTODY_HANDOFF"
+    "entity_id": "RMA-2026-000204",
+    "entity_type": "ReturnAuthorization",
+    "expected_decision": "Escalate as overdue after the expected return date; do not mark lost before threshold.",
+    "ground_truth": "OVERDUE_RETURN",
+    "issue_id": "GT-0000150",
+    "issue_type": "OVERDUE_RETURN",
+    "offending_record_id": "RMA-2026-000204"
   },
   {
-    "entity_id": "ASSET-0000177",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
-    "ground_truth": "LOST",
-    "issue_id": "GT-000074",
-    "issue_type": "LOST_ASSET"
+    "entity_id": "ASSET-0000170",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Hold the last verified location and block subsequent custody transitions until resolution.",
+    "ground_truth": "DISPUTED_CUSTODY_HANDOFF",
+    "issue_id": "GT-0000151",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF",
+    "offending_record_id": "CUST-ASSET-0000170-000011"
   },
   {
-    "entity_id": "ASSET-0000186",
+    "entity_id": "ASSET-0000173",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000152",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000173-000004"
+  },
+  {
+    "entity_id": "ASSET-0000178",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000153",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000178-000004"
+  },
+  {
+    "entity_id": "ASSET-0000182",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000154",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000182-000004"
+  },
+  {
+    "entity_id": "ASSET-0000182",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
-    "ground_truth": "DAMAGED",
-    "issue_id": "GT-000075",
-    "issue_type": "DAMAGED_ASSET"
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000155",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000036"
+  },
+  {
+    "entity_id": "REP-2026-000021",
+    "entity_type": "Repair",
+    "expected_decision": "Keep the deposit unsettled until the repair is closed.",
+    "ground_truth": "OPEN_REPAIR",
+    "issue_id": "GT-0000156",
+    "issue_type": "OPEN_REPAIR",
+    "offending_record_id": "REP-2026-000021"
+  },
+  {
+    "entity_id": "ASSET-0000183",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000157",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000037"
+  },
+  {
+    "entity_id": "ASSET-0000185",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000158",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000185-000004"
+  },
+  {
+    "entity_id": "ASSET-0000188",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000159",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000188-000004"
+  },
+  {
+    "entity_id": "ASSET-0000190",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000160",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000038"
+  },
+  {
+    "entity_id": "ASSET-0000190",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000161",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000190-000004"
   },
   {
     "entity_id": "ASSET-0000191",
-    "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000076",
-    "issue_type": "DELAYED_RETURN"
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000162",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000191-000004"
   },
   {
     "entity_id": "ASSET-0000192",
     "entity_type": "ReusableAsset",
-    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
-    "ground_truth": "DELAYED",
-    "issue_id": "GT-000077",
-    "issue_type": "DELAYED_RETURN"
+    "expected_decision": "Declare loss exactly at the type-specific threshold and forfeit the deposit.",
+    "ground_truth": "LOSS_EVENT_PENDING",
+    "issue_id": "GT-0000163",
+    "issue_type": "LOST_ASSET",
+    "offending_record_id": "CUST-ASSET-0000192-000003"
+  },
+  {
+    "entity_id": "ASSET-0000193",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000164",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000193-000008"
+  },
+  {
+    "entity_id": "ASSET-0000194",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000165",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000194-000004"
+  },
+  {
+    "entity_id": "ASSET-0000194",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000166",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000039"
+  },
+  {
+    "entity_id": "ASSET-0000194",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000167",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000194-000008"
+  },
+  {
+    "entity_id": "ASSET-0000196",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Hold the last verified location and block subsequent custody transitions until resolution.",
+    "ground_truth": "DISPUTED_CUSTODY_HANDOFF",
+    "issue_id": "GT-0000168",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF",
+    "offending_record_id": "CUST-ASSET-0000196-000002"
+  },
+  {
+    "entity_id": "ASSET-0000196",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000169",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000196-000005"
+  },
+  {
+    "entity_id": "ASSET-0000197",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply repair or quarantine deductions after required settlement evidence.",
+    "ground_truth": "DAMAGED_ASSET",
+    "issue_id": "GT-0000170",
+    "issue_type": "DAMAGED_ASSET",
+    "offending_record_id": "INSP-2026-000040"
+  },
+  {
+    "entity_id": "REP-2026-000024",
+    "entity_type": "Repair",
+    "expected_decision": "Keep the deposit unsettled until the repair is closed.",
+    "ground_truth": "OPEN_REPAIR",
+    "issue_id": "GT-0000171",
+    "issue_type": "OPEN_REPAIR",
+    "offending_record_id": "REP-2026-000024"
+  },
+  {
+    "entity_id": "ASSET-0000198",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Apply the type-specific late fee and record the actual return date.",
+    "ground_truth": "DELAYED_RETURN",
+    "issue_id": "GT-0000172",
+    "issue_type": "DELAYED_RETURN",
+    "offending_record_id": "CUST-ASSET-0000198-000004"
+  },
+  {
+    "entity_id": "ASSET-0000157",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Review the conflicting custody observations; use deterministic event replay and retain the audit trail.",
+    "ground_truth": "SIMULTANEOUS_LOCATIONS",
+    "issue_id": "GT-0000173",
+    "issue_type": "SIMULTANEOUS_LOCATIONS",
+    "offending_record_id": "CUST-ASSET-0000157-000005"
+  },
+  {
+    "entity_id": "ASSET-0000189",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Quarantine the return chronology for correction before accepting the return.",
+    "ground_truth": "RETURN_BEFORE_DISPATCH",
+    "issue_id": "GT-0000174",
+    "issue_type": "RETURN_BEFORE_DISPATCH",
+    "offending_record_id": "CUST-ASSET-0000189-000004"
+  },
+  {
+    "entity_id": "ASSET-0000200",
+    "entity_type": "DepositLedger",
+    "expected_decision": "Hold the duplicate refund and reconcile against the original charge.",
+    "ground_truth": "DUPLICATE_DEPOSIT_REFUND",
+    "issue_id": "GT-0000175",
+    "issue_type": "DUPLICATE_DEPOSIT_REFUND",
+    "offending_record_id": "DLG-2026-00000577"
+  },
+  {
+    "entity_id": "ASSET-0000088",
+    "entity_type": "Repair",
+    "expected_decision": "Block repair closure until valid inspection evidence is linked.",
+    "ground_truth": "REPAIR_WITHOUT_INSPECTION",
+    "issue_id": "GT-0000176",
+    "issue_type": "REPAIR_WITHOUT_INSPECTION",
+    "offending_record_id": "REP-2026-000015"
+  },
+  {
+    "entity_id": "ASSET-0000139",
+    "entity_type": "CustodyEvent",
+    "expected_decision": "Request actor attribution; retain the event without inventing an actor.",
+    "ground_truth": "CUSTODY_ACTOR_MISSING",
+    "issue_id": "GT-0000177",
+    "issue_type": "CUSTODY_ACTOR_MISSING",
+    "offending_record_id": "CUST-ASSET-0000139-000003"
   }
 ]
