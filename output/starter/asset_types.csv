@@ -1,0 +1,4 @@
+asset_type_id,name,deposit_cents,replacement_cost_cents,return_window_days,max_cycles,repairable,inspection_required
+ATYPE-001,Reusable tote,2500,5000,21,100,true,true
+ATYPE-002,Plastic pallet,12500,25000,30,80,true,true
+ATYPE-003,Insulated crate,7500,15000,14,60,false,true

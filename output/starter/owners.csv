@@ -1,0 +1,4 @@
+owner_id,name,owner_type,active
+OWNER-001,Northstar Supply,SUPPLIER,true
+OWNER-002,YottaFlex Pool,POOL_OPERATOR,true
+OWNER-003,Meridian Retail,CUSTOMER,true

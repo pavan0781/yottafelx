@@ -1,0 +1,16 @@
+{
+  "assets": 200,
+  "assets_with_nonzero_deposit_balance": 47,
+  "custody_events": 1000,
+  "damaged_assets": 23,
+  "delayed_returns": 34,
+  "deposit_charges_cents": 1500000,
+  "deposit_refunds_cents": 1187500,
+  "disputed_handoffs": 5,
+  "exception_assets": 5,
+  "ground_truth_labels": 77,
+  "lost_assets": 10,
+  "net_deposit_balance_cents": 312500,
+  "on_time_return_rate": 0.7792,
+  "shipments": 100
+}

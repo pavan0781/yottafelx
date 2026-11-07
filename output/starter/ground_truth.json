@@ -1,0 +1,618 @@
+[
+  {
+    "entity_id": "ASSET-0000001",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Flag conflicting current locations; do not silently select one.",
+    "ground_truth": "EXCEPTION",
+    "issue_id": "GT-000001",
+    "issue_type": "SIMULTANEOUS_LOCATIONS"
+  },
+  {
+    "entity_id": "ASSET-0000002",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Reject or quarantine return chronology.",
+    "ground_truth": "EXCEPTION",
+    "issue_id": "GT-000002",
+    "issue_type": "RETURN_BEFORE_DISPATCH"
+  },
+  {
+    "entity_id": "ASSET-0000003",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Flag the second refund and retain both ledger entries.",
+    "ground_truth": "EXCEPTION",
+    "issue_id": "GT-000003",
+    "issue_type": "DUPLICATE_DEPOSIT_REFUND"
+  },
+  {
+    "entity_id": "ASSET-0000003",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000004",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000003",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000005",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000004",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Block repair closure pending inspection evidence.",
+    "ground_truth": "EXCEPTION",
+    "issue_id": "GT-000006",
+    "issue_type": "REPAIR_WITHOUT_INSPECTION"
+  },
+  {
+    "entity_id": "ASSET-0000004",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000007",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000005",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Flag the custody event for attribution.",
+    "ground_truth": "EXCEPTION",
+    "issue_id": "GT-000008",
+    "issue_type": "CUSTODY_ACTOR_MISSING"
+  },
+  {
+    "entity_id": "ASSET-0000011",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000009",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000013",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
+    "ground_truth": "LOST",
+    "issue_id": "GT-000010",
+    "issue_type": "LOST_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000014",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000011",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000017",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000012",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000017",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000013",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000028",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000014",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000030",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000015",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000037",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
+    "ground_truth": "LOST",
+    "issue_id": "GT-000016",
+    "issue_type": "LOST_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000041",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000017",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000043",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000018",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000044",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000019",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000046",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
+    "ground_truth": "LOST",
+    "issue_id": "GT-000020",
+    "issue_type": "LOST_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000047",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000021",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000050",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000022",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000051",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
+    "ground_truth": "LOST",
+    "issue_id": "GT-000023",
+    "issue_type": "LOST_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000056",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000024",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000058",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Escalate the handoff for operator confirmation.",
+    "ground_truth": "DISPUTED",
+    "issue_id": "GT-000025",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF"
+  },
+  {
+    "entity_id": "ASSET-0000064",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000026",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000067",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000027",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000072",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000028",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000078",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000029",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000080",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
+    "ground_truth": "LOST",
+    "issue_id": "GT-000030",
+    "issue_type": "LOST_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000084",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000031",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000088",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000032",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000089",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000033",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000091",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
+    "ground_truth": "LOST",
+    "issue_id": "GT-000034",
+    "issue_type": "LOST_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000092",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000035",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000093",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000036",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000095",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000037",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000096",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
+    "ground_truth": "LOST",
+    "issue_id": "GT-000038",
+    "issue_type": "LOST_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000097",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000039",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000103",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Escalate the handoff for operator confirmation.",
+    "ground_truth": "DISPUTED",
+    "issue_id": "GT-000040",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF"
+  },
+  {
+    "entity_id": "ASSET-0000108",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000041",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000109",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000042",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000109",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Escalate the handoff for operator confirmation.",
+    "ground_truth": "DISPUTED",
+    "issue_id": "GT-000043",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF"
+  },
+  {
+    "entity_id": "ASSET-0000110",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000044",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000111",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000045",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000112",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000046",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000116",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000047",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000118",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000048",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000119",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000049",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000121",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
+    "ground_truth": "LOST",
+    "issue_id": "GT-000050",
+    "issue_type": "LOST_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000122",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000051",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000130",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000052",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000136",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000053",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000139",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000054",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000141",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000055",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000143",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000056",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000143",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000057",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000148",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000058",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000149",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000059",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000151",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000060",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000154",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000061",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000155",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000062",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000156",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000063",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000157",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000064",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000157",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000065",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000157",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Escalate the handoff for operator confirmation.",
+    "ground_truth": "DISPUTED",
+    "issue_id": "GT-000066",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF"
+  },
+  {
+    "entity_id": "ASSET-0000158",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000067",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000159",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000068",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000164",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000069",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000169",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
+    "ground_truth": "LOST",
+    "issue_id": "GT-000070",
+    "issue_type": "LOST_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000171",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000071",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000172",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000072",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000175",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Escalate the handoff for operator confirmation.",
+    "ground_truth": "DISPUTED",
+    "issue_id": "GT-000073",
+    "issue_type": "DISPUTED_CUSTODY_HANDOFF"
+  },
+  {
+    "entity_id": "ASSET-0000177",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Keep the deposit charged and mark the asset lost from custody events.",
+    "ground_truth": "LOST",
+    "issue_id": "GT-000074",
+    "issue_type": "LOST_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000186",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Require an inspection; repairable assets need a linked repair record.",
+    "ground_truth": "DAMAGED",
+    "issue_id": "GT-000075",
+    "issue_type": "DAMAGED_ASSET"
+  },
+  {
+    "entity_id": "ASSET-0000191",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000076",
+    "issue_type": "DELAYED_RETURN"
+  },
+  {
+    "entity_id": "ASSET-0000192",
+    "entity_type": "ReusableAsset",
+    "expected_decision": "Apply the lifecycle overdue rule using actual return date and RMA due date.",
+    "ground_truth": "DELAYED",
+    "issue_id": "GT-000077",
+    "issue_type": "DELAYED_RETURN"
+  }
+]
