@@ -1,0 +1,36 @@
+{
+  "anomaly_counts": {
+    "CUSTODY_ACTOR_MISSING": 1,
+    "DUPLICATE_DEPOSIT_REFUND": 1,
+    "REPAIR_WITHOUT_INSPECTION": 1,
+    "RETURN_BEFORE_DISPATCH": 1,
+    "SIMULTANEOUS_LOCATIONS": 1
+  },
+  "files_compared": 21,
+  "passed": true,
+  "profile": "starter",
+  "seed": 20261022,
+  "sha256": {
+    "asset_snapshots.csv": "0378a3250cc0f8599d04e46418578fb01579b7d9580fc079aec5d8dc8171a06b",
+    "asset_types.csv": "ffb62da7d75242efd5b20f08ca40530f1039ee4d18ce3a4d35000db88a7ab49d",
+    "custody_events.csv": "94b9ffb4dc344edecfd7e85ccbac31b2426193e57d98a7e76b01171ad3983a52",
+    "data.json": "5d2bdd3a575cd6779e9450f29da3ca5448b7a5a89e7ef96a0de993afb50d212a",
+    "deposit_ledger.csv": "e342fdee0f46720eed6f148ff5906c5160089c6a612dbede8e1ef084a0a8af27",
+    "ground_truth.csv": "5126397366fd324c89eea27adc178827c5eb901bab340866701c635a17978efe",
+    "ground_truth.json": "bafc65afc466f24e44a5cb27072f0777d146fd9f66ea4a0045acce8ee5bdcee3",
+    "inspections.csv": "a1b80565c47360ece33e8743127f605e8795a510cc01ca18caeb3f4bcaaf2b1e",
+    "lifecycle_transitions.csv": "47da898555803817a678f03f795785976dee8b7c8b11fc7fda3205d224da329d",
+    "locations.csv": "0681318e67b808d7eb75f7663e82c63185a51204bfa17a48071d39416f13fe9a",
+    "metrics.json": "cc4687935a71795c3ac6859b71c946bc8b268691f4e4a9e327514731f9c05f46",
+    "operators.csv": "68680bc7a68f9ab21bc0d22487f252af5cd5afb99bb8fa9e442b8ec3860b0c10",
+    "owners.csv": "805966797e0cdc6ab951d6a352d667afd8fcd823a5bebf44372712156fe926e9",
+    "repairs.csv": "4a7c4f18e4ff998e8ea598e57c30442150c811550d57ab073e56bddeb0ca8ce1",
+    "return_authorizations.csv": "47a3daf4e73e61d74ee78ef9efe3c3e4bd06313c0c144d06ba07befcb3b6efa5",
+    "reusable_assets.csv": "3329bdd9cc7728c0acb42380fd8623e5e1e507febdcaa8b6e02ddb0a5cad88d8",
+    "seed.sql": "fb64eefaedf77066f5cd8dbf271ac09201d5d8076eb600c6b398d4007f77b582",
+    "shipment_assets.csv": "db69aad00ddd5141af786058025bd81ef95592acb122cabeab6b2ac7c0d0e3d2",
+    "shipments.csv": "b98ad42ebe275152e69e6191b2d003af46c160b7f7e800323b6969c3fda3b2fc",
+    "source_manifest.json": "5f79ff6a0231c92c41c7f9075c30d1d052b8f0a875e2665dfac0f951f9ec384c",
+    "validation_summary.json": "2a409954b40cd843bc0ac7baa678e8d6f13167f27fd601ff4817b920010677eb"
+  }
+}
